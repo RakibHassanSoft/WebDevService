@@ -1,0 +1,32 @@
+/* Add this CSS to your project's main CSS file */
+.underline-effect {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.underline-effect::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: #32CD32; /* LimeGreen color */
+    transition: width 0.3s ease;
+}
+
+.underline-effect:hover::after {
+    width: 100%;
+    background: #32CD32; /* LimeGreen color */
+}
+
+.underline-effect:hover {
+    color: #32CD32; /* LimeGreen color */
+}
+
+.underline-effect-active {
+    color: white;
+}
